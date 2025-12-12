@@ -1,0 +1,243 @@
+/* Ajusta el fondo general y la fuente */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(145deg, #c9d6ff, #e2e2e2);
+    margin: 0;
+    padding: 30px;
+    color: #243047;
+}
+
+/* Oculta elementos cuando sea necesario */
+.hidden {
+    display: none;
+}
+
+/* Contenedor básico para secciones */
+.card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 20px;
+    margin-bottom: 26px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.12),
+        -6px -6px 16px rgba(255, 255, 255, 0.8);
+    transition: 0.25s ease;
+}
+
+/* Efecto al pasar el mouse sobre contenedores */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 14px 14px 28px rgba(0, 0, 0, 0.16),
+        -8px -8px 18px rgba(255, 255, 255, 0.9);
+}
+
+/* Tamaño del login */
+.login-card {
+    max-width: 420px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* Título principal */
+.login-card h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Texto secundario */
+.sub {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #4f5d73;
+}
+
+/* Campos de formulario */
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 14px;
+    border: none;
+    background: #f0f3ff;
+    font-size: 15px;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.08),
+        inset -3px -3px 8px rgba(255, 255, 255, 0.8);
+    transition: .2s ease;
+}
+
+/* Efecto al escribir en inputs */
+input:focus {
+    outline: none;
+    background: white;
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.15),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+/* Botón principal */
+.btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a8dff, #4e6ae6);
+    color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15),
+        -3px -3px 8px rgba(255, 255, 255, 0.7);
+    transition: .25s ease;
+}
+
+/* Efecto del botón */
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #5c7ef5, #415bd4);
+}
+
+/* Botón para eliminar cosas */
+.btn-delete {
+    background: #e74c3c !important;
+}
+
+.btn-delete:hover {
+    background: #c0392b !important;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background: #fafbff;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.10),
+        -6px -6px 16px rgba(255, 255, 255, 0.85);
+}
+
+/* Botones de navegación */
+.navbar button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 14px;
+    background: #f0f3ff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+/* Efecto al pasar el mouse en la navegación */
+.navbar button:hover {
+    background: #dfe5ff;
+    transform: translateY(-2px);
+}
+
+/* Botón de cerrar sesión */
+.logout {
+    margin-left: auto;
+    background: #ff6b6b !important;
+    color: white !important;
+}
+
+/* Títulos dentro de los módulos */
+.modulo h2 {
+    font-size: 28px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    color: #2f3d5c;
+}
+
+/* Subtítulos */
+h3 {
+    font-size: 20px;
+    margin-top: 22px;
+    color: #42516c;
+}
+
+/* Contenedor para el resumen */
+.resumen {
+    display: flex;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+/* Cuadros pequeños del resumen */
+.box {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 16px;
+    background: #f5f7ff;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.08),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.8);
+    transition: .2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.box:hover {
+    transform: translateY(-3px);
+    background: #e9ecff;
+}
+
+/* Texto de valores */
+.box span {
+    color: #546bf1;
+}
+
+/* Elementos del catálogo */
+#catalogo div {
+    background: #f5f7ff;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.10),
+        -3px -3px 12px rgba(255, 255, 255, 0.85);
+    transition: .25s ease;
+}
+
+/* Efecto del catálogo */
+#catalogo div:hover {
+    transform: translateX(8px);
+    background: #e8eaff;
+}
+
+/* Botón de comprar */
+#catalogo button {
+    padding: 10px 16px;
+    background: #6a8bff;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .2s ease;
+    font-weight: 600;
+}
+
+/* Hover del botón de comprar */
+#catalogo button:hover {
+    background: #5874e6;
+}
+
+/* Elementos de listas */
+ul li {
+    background: #f5f7ff;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 14px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.10),
+        -3px -3px 10px rgba(255, 255, 255, 0.85);
+    transition: 0.2s ease;
+}
+
+/* Efecto de listas */
+ul li:hover {
+    background: #e6e9ff;
+    transform: translateX(6px);
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spa de Mascotas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+    <section id="login" class="card login-card">
+        <h1>Spa de Mascotas</h1>
+        <p class="sub">Inicia sesión</p>
+
+        <form id="loginForm">
+            <input type="text" id="usuario" placeholder="Usuario" required>
+            <input type="password" id="contrasena" placeholder="Contraseña" required>
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+
+        <p class="tip">Usuario: admin | Contraseña: 123</p>
+    </section>
+
+
+    <!-- APP PRINCIPAL -->
+    <div id="app" class="hidden">
+
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <button onclick="mostrarModulo('principal')">1 - Principal</button>
+            <button onclick="mostrarModulo('registro')">2 - Registro</button>
+            <button onclick="mostrarModulo('agenda')">3 - Agenda</button>
+            <button onclick="mostrarModulo('carrito')">4 - Carrito</button>
+            <button onclick="cerrarSesion()" class="logout">Cerrar sesión</button>
+        </nav>
+
+        <!-- CONTENIDO -->
+        <main class="contenido">
+
+            <!-- MÓDULO 1 -->
+            <section id="principal" class="modulo hidden card">
+                <h2>Panel principal</h2>
+                <p class="sub">Resumen del sistema</p>
+
+                <div class="resumen">
+                    <div class="box">Dueños: <span id="totalDueno">0</span></div>
+                    <div class="box">Mascotas: <span id="totalMascota">0</span></div>
+                    <div class="box">Citas: <span id="totalCita">0</span></div>
+                </div>
+            </section>
+
+
+            <!-- MÓDULO 2 -->
+            <section id="registro" class="modulo hidden card">
+                <h2>Registro</h2>
+
+                <h3>Registrar Dueño</h3>
+                <form id="formDueno">
+                    <input type="text" id="duenoNombre" placeholder="Nombre">
+                    <input type="text" id="duenoTel" placeholder="Teléfono">
+                    <input type="email" id="duenoCorreo" placeholder="Correo">
+                    <button class="btn">Guardar</button>
+                </form>
+
+                <h3>Registrar Mascota</h3>
+                <form id="formMascota">
+                    <input type="text" id="mascotaNombre" placeholder="Nombre">
+                    <input type="text" id="mascotaEspecie" placeholder="Especie">
+                    <input type="text" id="mascotaRaza" placeholder="Raza">
+                    <button class="btn">Guardar</button>
+                </form>
+            </section>
+
+
+            <!-- MÓDULO 3 -->
+            <section id="agenda" class="modulo hidden card">
+                <h2>Agenda</h2>
+
+                <form id="formAgenda">
+                    <input type="date" id="fecha">
+                    <input type="time" id="hora">
+                    <input type="text" id="mascotaAgendada" placeholder="Mascota">
+                    <input type="text" id="servicioAgendado" placeholder="Servicio">
+                    <button class="btn">Agendar</button>
+                </form>
+
+                <h3>Citas registradas</h3>
+                <ul id="listaCitas"></ul>
+            </section>
+
+
+            <!-- MÓDULO 4 -->
+            <section id="carrito" class="modulo hidden card">
+                <h2>Catálogo</h2>
+
+                <div id="catalogo"></div>
+
+                <h2>Carrito</h2>
+                <ul id="listaCarrito"></ul>
+
+                <p>Subtotal: <span id="subtotal">0</span></p>
+                <p>Total: <span id="total">0</span></p>
+
+                <button onclick="vaciarCarrito()" class="btn">Vaciar carrito</button>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
